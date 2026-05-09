@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="XYZ Bank Automation Suite" verbose="1">
+
+    <test name="Bank Tests">
+        <classes>
+            <class name="tests.LoginTest"/>
+            <class name="tests.BankFunctionalityTest"/>
+            <class name="tests.ManagerFunctionalityTest"/>
+        </classes>
+    </test>
+
+</suite>

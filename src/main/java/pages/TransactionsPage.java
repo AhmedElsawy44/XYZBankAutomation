@@ -32,12 +32,11 @@ public class TransactionsPage {
 
     public int getTransactionsCount() {
         try {
-            // Wait shortly to see if rows appear
             wait.until(ExpectedConditions.presenceOfElementLocated(transactionsTableRows));
             List<WebElement> rows = driver.findElements(transactionsTableRows);
             return rows.size();
         } catch (Exception e) {
-            return 0; // Return 0 if no rows are found
+            return 0;
         }
     }
 }
