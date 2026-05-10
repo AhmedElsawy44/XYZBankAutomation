@@ -7,13 +7,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class AddCustomerPage {
-    private WebDriver driver;
-    private WebDriverWait wait;
+    private final WebDriver driver;
+    private final WebDriverWait wait;
 
-    private By firstNameInput = By.xpath("//input[@ng-model='fName']");
-    private By lastNameInput = By.xpath("//input[@ng-model='lName']");
-    private By postCodeInput = By.xpath("//input[@ng-model='postCd']");
-    private By addCustomerBtn = By.cssSelector("button[type='submit']");
+    private final By firstNameInput = By.xpath("//input[@ng-model='fName']");
+    private final By lastNameInput = By.xpath("//input[@ng-model='lName']");
+    private final By postCodeInput = By.xpath("//input[@ng-model='postCd']");
+    private final By addCustomerBtn = By.cssSelector("button[type='submit']");
 
     public AddCustomerPage(WebDriver driver) {
         this.driver = driver;

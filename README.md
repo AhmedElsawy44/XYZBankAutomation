@@ -17,6 +17,7 @@ A professional, enterprise-level test automation framework built for the [XYZ Ba
 ```text
 XYZBankAutomation/
 ├── pom.xml                   # Maven dependencies and build plugins
+├── testng.xml                # TestNG suite configuration
 └── src/
     ├── main/java/pages/      # Page Object Classes
     │   ├── LoginPage.java

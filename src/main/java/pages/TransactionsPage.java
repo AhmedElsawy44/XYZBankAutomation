@@ -9,12 +9,12 @@ import java.time.Duration;
 import java.util.List;
 
 public class TransactionsPage {
-    private WebDriver driver;
-    private WebDriverWait wait;
+    private final WebDriver driver;
+    private final WebDriverWait wait;
 
-    private By resetBtn = By.cssSelector("button[ng-click='reset()']");
-    private By backBtn = By.cssSelector("button[ng-click='back()']");
-    private By transactionsTableRows = By.xpath("//table/tbody/tr");
+    private final By resetBtn = By.cssSelector("button[ng-click='reset()']");
+    private final By backBtn = By.cssSelector("button[ng-click='back()']");
+    private final By transactionsTableRows = By.xpath("//table/tbody/tr");
 
     public TransactionsPage(WebDriver driver) {
         this.driver = driver;

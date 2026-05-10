@@ -7,12 +7,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class DepositPage {
-    private WebDriverWait wait;
+    private final WebDriverWait wait;
 
-    // Locators for XYZ Bank Deposit Page
-    private By amountInput = By.xpath("//input[@ng-model='amount']");
-    private By submitDepositBtn = By.cssSelector("button[type='submit']");
-    private By successMessage = By.xpath("//span[contains(@class, 'error') and contains(text(), 'Deposit Successful')]");
+    private final By amountInput = By.xpath("//input[@ng-model='amount']");
+    private final By submitDepositBtn = By.cssSelector("button[type='submit']");
+    private final By successMessage = By.xpath("//span[contains(@class, 'error') and contains(text(), 'Deposit Successful')]");
 
     public DepositPage(WebDriver driver) {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));

@@ -8,14 +8,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class LoginPage {
-    private WebDriver driver;
-    private WebDriverWait wait;
+    private final WebDriver driver;
+    private final WebDriverWait wait;
 
     // Locators for XYZ Bank
-    private By customerLoginBtn = By.cssSelector("button[ng-click='customer()']");
-    private By managerLoginBtn = By.cssSelector("button[ng-click='manager()']");
-    private By userSelectDropdown = By.id("userSelect");
-    private By loginBtn = By.cssSelector("button[type='submit']");
+    private final By customerLoginBtn = By.cssSelector("button[ng-click='customer()']");
+    private final By managerLoginBtn = By.cssSelector("button[ng-click='manager()']");
+    private final By userSelectDropdown = By.id("userSelect");
+    private final By loginBtn = By.cssSelector("button[type='submit']");
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;

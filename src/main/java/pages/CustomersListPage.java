@@ -9,12 +9,12 @@ import java.time.Duration;
 import java.util.List;
 
 public class CustomersListPage {
-    private WebDriver driver;
-    private WebDriverWait wait;
+    private final WebDriver driver;
+    private final WebDriverWait wait;
 
-    private By searchBox = By.xpath("//input[@ng-model='searchCustomer']");
-    private By customerRows = By.xpath("//table/tbody/tr");
-    private By deleteBtn = By.cssSelector("button[ng-click='deleteCust(cust)']");
+    private final By searchBox = By.xpath("//input[@ng-model='searchCustomer']");
+    private final By customerRows = By.xpath("//table/tbody/tr");
+    private final By deleteBtn = By.cssSelector("button[ng-click='deleteCust(cust)']");
 
     public CustomersListPage(WebDriver driver) {
         this.driver = driver;

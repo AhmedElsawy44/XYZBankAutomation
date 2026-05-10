@@ -8,12 +8,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class OpenAccountPage {
-    private WebDriver driver;
-    private WebDriverWait wait;
+    private final WebDriver driver;
+    private final WebDriverWait wait;
 
-    private By customerSelectDropdown = By.id("userSelect");
-    private By currencySelectDropdown = By.id("currency");
-    private By processBtn = By.cssSelector("button[type='submit']");
+    private final By customerSelectDropdown = By.id("userSelect");
+    private final By currencySelectDropdown = By.id("currency");
+    private final By processBtn = By.cssSelector("button[type='submit']");
 
     public OpenAccountPage(WebDriver driver) {
         this.driver = driver;

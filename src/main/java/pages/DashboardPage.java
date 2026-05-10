@@ -7,15 +7,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class DashboardPage {
-    private WebDriver driver;
-    private WebDriverWait wait;
+    private final WebDriver driver;
+    private final WebDriverWait wait;
 
     // Locators for XYZ Bank Dashboard
-    private By transactionsTab = By.cssSelector("button[ng-click='transactions()']");
-    private By depositTab = By.cssSelector("button[ng-click='deposit()']");
-    private By withdrawTab = By.cssSelector("button[ng-click='withdrawl()']");
-    private By balanceValue = By.xpath("//div[@ng-hide='noAccount']//strong[2]");
-    private By accountSelectDropdown = By.id("accountSelect");
+    private final By transactionsTab = By.cssSelector("button[ng-click='transactions()']");
+    private final By depositTab = By.cssSelector("button[ng-click='deposit()']");
+    private final By withdrawTab = By.cssSelector("button[ng-click='withdrawl()']");
+    private final By balanceValue = By.xpath("//div[@ng-hide='noAccount']//strong[2]");
+    private final By accountSelectDropdown = By.id("accountSelect");
 
     public DashboardPage(WebDriver driver) {
         this.driver = driver;

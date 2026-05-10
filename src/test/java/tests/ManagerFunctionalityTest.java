@@ -43,7 +43,6 @@ public class ManagerFunctionalityTest extends TestBase {
         
         customersPage.deleteFirstCustomer();
         
-        // Search again to verify deletion
         customersPage.searchCustomer("Harry");
         int countAfterDelete = customersPage.getCustomersCount();
         Assert.assertEquals(countAfterDelete, countBeforeDelete - 1, "Customer was not deleted successfully.");

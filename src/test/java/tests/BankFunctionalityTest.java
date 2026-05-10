@@ -1,7 +1,7 @@
 package tests;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass; // تم التعديل لتكون BeforeClass
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.DashboardPage;
 import pages.DepositPage;
@@ -11,7 +11,6 @@ public class BankFunctionalityTest extends TestBase {
 
     private DashboardPage dashboardPage;
 
-    // استخدمنا BeforeClass عشان نعمل لوجين مرة واحدة ونحتفظ بالرصيد (Session) خلال باقي الاختبارات
     @BeforeClass
     public void loginBeforeTests() {
         LoginPage loginPage = new LoginPage(driver);
@@ -44,7 +43,6 @@ public class BankFunctionalityTest extends TestBase {
     public void testWithdrawal() throws InterruptedException {
         pages.WithdrawalPage withdrawalPage = dashboardPage.navigateToWithdrawal();
 
-        // [الحل] انتظار قصير حتى يقوم AngularJS بتحديث الرصيد في خلفية صفحة السحب
         Thread.sleep(1500);
 
         withdrawalPage.performWithdrawal("500");
@@ -57,12 +55,10 @@ public class BankFunctionalityTest extends TestBase {
     public void testTransactionsHistory() throws InterruptedException {
         pages.TransactionsPage transactionsPage = dashboardPage.navigateToTransactions();
 
-        // [الحل] انتظار قصير حتى يتم رسم جدول المعاملات بناءً على البيانات المحفوظة
         Thread.sleep(2000);
 
         int count = transactionsPage.getTransactionsCount();
         
-        // Workaround for Angular app delay: if transactions didn't load, click back and try again
         if (count == 0) {
             dashboardPage = transactionsPage.clickBack();
             Thread.sleep(1000);

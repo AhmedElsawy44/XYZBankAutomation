@@ -7,12 +7,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class ManagerDashboardPage {
-    private WebDriver driver;
-    private WebDriverWait wait;
+    private final WebDriver driver;
+    private final WebDriverWait wait;
 
-    private By addCustomerTab = By.cssSelector("button[ng-click='addCust()']");
-    private By openAccountTab = By.cssSelector("button[ng-click='openAccount()']");
-    private By customersTab = By.cssSelector("button[ng-click='showCust()']");
+    private final By addCustomerTab = By.cssSelector("button[ng-click='addCust()']");
+    private final By openAccountTab = By.cssSelector("button[ng-click='openAccount()']");
+    private final By customersTab = By.cssSelector("button[ng-click='showCust()']");
 
     public ManagerDashboardPage(WebDriver driver) {
         this.driver = driver;
